@@ -1,7 +1,7 @@
 package herencia;
 
 public class Test {
-
+    
     public static void main(String[] args) {
         
         Camion camion1 = new Camion();
@@ -37,7 +37,14 @@ public class Test {
         sucursal1.buscarAuto("GFVZ16");
         sucursal1.buscarAuto("");
         
+        System.out.println("En la sucursal quedan " + sucursal1.calcularEspacioDisponibleParaCamiones() + " espacios disponibles.");
+        System.out.println("En la sucursal hay " + sucursal1.calcularTotalDeUnidades() + " unidades almacenadas.");
+        sucursal1.venderAuto("");
+        sucursal1.venderAuto("GFVZ16");
+        System.out.println("En la sucursal hay " + sucursal1.calcularTotalDeUnidades() + " unidades almacenadas.");
+        sucursal1.almacenarAuto(automovil1);
         
+        sucursal1.mostrarInformeDiario();
     }
     
 }

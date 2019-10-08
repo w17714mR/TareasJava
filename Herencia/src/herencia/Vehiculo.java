@@ -1,6 +1,7 @@
 package herencia;
 
 public abstract class Vehiculo {
+
     private String nombre;
     private String modelo;
     private int anioFabricacion;
@@ -13,7 +14,7 @@ public abstract class Vehiculo {
         this.anioFabricacion = -1;
         this.color = "";
         this.kilometraje = -1;
-        
+
         System.out.println("Vehículo creado");
     }
 
@@ -65,12 +66,10 @@ public abstract class Vehiculo {
         this.kilometraje = kilometraje;
     }
 
-    
     public void mostrarInformacion() {
         System.out.println("Vehiculo{" + "nombre=" + nombre + ", modelo=" + modelo + ", anioFabricacion=" + anioFabricacion + ", color=" + color + ", kilometraje=" + kilometraje + '}');
     }
-     
-    public abstract void mostrarInformacionEspecifica ();
-   
-    
+
+    public abstract void mostrarInformacionEspecifica();
+
 }

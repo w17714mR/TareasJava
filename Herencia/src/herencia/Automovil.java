@@ -1,7 +1,7 @@
 package herencia;
 
 public class Automovil extends Vehiculo {
-    
+
     private char numeroDePuertas;
     private boolean nuevo;
     private String patente;
@@ -10,7 +10,7 @@ public class Automovil extends Vehiculo {
         this.numeroDePuertas = ' ';
         this.nuevo = true;
         this.patente = "";
-    
+
     }
 
     public Automovil(char numeroDePuertas, boolean nuevo, String patente) {

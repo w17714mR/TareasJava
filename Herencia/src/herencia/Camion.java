@@ -1,7 +1,7 @@
 package herencia;
 
-public class Camion extends Vehiculo{
-    
+public class Camion extends Vehiculo {
+
     private float capacidadDeCarga;
     private char numeroNeumaticos;
     private boolean tolva;
@@ -11,7 +11,7 @@ public class Camion extends Vehiculo{
         this.numeroNeumaticos = ' ';
         this.tolva = true;
         System.out.println("Camión creado.");
-        
+
     }
 
     public Camion(float capacidadDeCarga, char numeroNeumaticos, boolean tolva) {
@@ -20,7 +20,6 @@ public class Camion extends Vehiculo{
         this.tolva = tolva;
     }
 
-    
     public float getCapacidadDeCarga() {
         return capacidadDeCarga;
     }
@@ -49,11 +48,11 @@ public class Camion extends Vehiculo{
     public String toString() {
         return "Camion{" + "capacidadDeCarga=" + capacidadDeCarga + ", numeroNeumaticos=" + numeroNeumaticos + ", tolva=" + tolva + '}';
     }
-    
+
     @Override
-    public void mostrarInformacionEspecifica(){
+    public void mostrarInformacionEspecifica() {
         super.mostrarInformacion();
         System.out.println(this.toString());;
     }
-    
+
 }
