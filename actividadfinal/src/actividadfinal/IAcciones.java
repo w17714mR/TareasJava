@@ -1,9 +1,9 @@
 package actividadfinal;
 
 public interface IAcciones {
-    private int BONO_MEDICO = 100000;
-    private int BONO_PARAMEDICO = 80000;
+    int BONO_MEDICO = 100000;
+    int BONO_PARAMEDICO = 80000;
 
     public abstract void mostrarInformacionEspecifica();
-    public abstract void calcularSueldo(Hint horasTrabajadas);
+    public abstract void calcularSueldo(int horasTrabajadas);
 }

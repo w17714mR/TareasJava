@@ -1,6 +1,6 @@
 package actividadfinal;
 
-public class Doctor extends Persona implements IAcciones {
+public class Doctor extends Persona {
 
     String especialidad;
     int anhiosExperiencia;
@@ -11,6 +11,7 @@ public class Doctor extends Persona implements IAcciones {
         this.especialidad = "";
         this.anhiosExperiencia = 0;
         this.sueldoBase = 0;
+        System.out.println("DOCTOR CREADO.");
     }
 
     public Doctor(String especialidad, int anhiosExperiencia, int sueldoBase, String rut, String pnombre, String snombre, String apaterno, String amaterno, String edad, char sexo) {
@@ -51,7 +52,14 @@ public class Doctor extends Persona implements IAcciones {
 
     @Override
     public void mostrarInformacionEspecifica() {
-        super.mostrarInformacionPersona();
-        this.toString();
+        this.mostrarInformacionPersona();
+        System.out.println("INFORMACIÓN ESPECÍFICA: ");
+        System.out.println("------------------------");
+        System.out.println("ESPECIALIDAD: "+this.getEspecialidad());
+        System.out.println("AÑOS EXPERIENCIA: "+this.getAnhiosExperiencia());
+        System.out.println("SUELDO BASE: "+this.getSueldoBase());
     }
+    
+    @Override
+    public void calcularSueldo(int horasTrabajadas){}
 }

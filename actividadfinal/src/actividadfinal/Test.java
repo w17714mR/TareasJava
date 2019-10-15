@@ -1,21 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package actividadfinal;
 
-/**
- *
- * @author William
- */
 public class Test {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Doctor doctor1 = new Doctor();
+        
+        doctor1.setPnombre("William");
+        doctor1.setSnombre("Alberto");
+        doctor1.setApaterno("Rehel");
+        doctor1.setAmaterno("Rifo");
+        doctor1.setEdad("28");
+        doctor1.setRut("16387103-3");
+        doctor1.setSexo('F');
+        doctor1.setAnhiosExperiencia(6);
+        doctor1.setEspecialidad("Oncología");
+        doctor1.setSueldoBase(600000);
+        
+        doctor1.mostrarInformacionPersona();
+        doctor1.mostrarInformacionEspecifica();
+        
+        Clinica clinica1 = new Clinica();
+        clinica1.buscarTrabajador("16387103-3");
+        clinica1.getColeccionDePersonas().add(doctor1);
+        clinica1.buscarTrabajador("16387103-3");
+        
+        clinica1.almacenarTrabajador(doctor1);
+        clinica1.getColeccionDePersonas().remove(doctor1);
+        clinica1.almacenarTrabajador(doctor1);
+        
     }
     
 }

@@ -1,6 +1,6 @@
 package actividadfinal;
 
-public abstract class Persona {
+public abstract class Persona implements IAcciones {
 
     private String rut;
     private String pnombre;
@@ -18,6 +18,7 @@ public abstract class Persona {
         this.amaterno = "";
         this.edad = "";
         this.sexo = ' ';
+        System.out.println("PERSONA CREADA.");
     }
 
     public Persona(String rut, String pnombre, String snombre, String apaterno, String amaterno, String edad, char sexo) {
@@ -93,6 +94,10 @@ public abstract class Persona {
 
     // MÉTODOS CUSTOMER
     public void mostrarInformacionPersona() {
-        this.toString();
+        System.out.println("INFORMACIÓN PERSONAL: ");
+        System.out.println("------------------------");
+        System.out.println("NOMBRE: "+this.getPnombre()+" "+this.snombre+" "+this.apaterno+" "+this.amaterno);
+        System.out.println("EDAD: "+this.getEdad());
+        System.out.println("SEXO: "+this.getSexo());
     }
 }
