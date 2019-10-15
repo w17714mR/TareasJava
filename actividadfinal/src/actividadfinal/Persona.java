@@ -1,6 +1,7 @@
 package actividadfinal;
 
 public abstract class Persona {
+
     private String rut;
     private String pnombre;
     private String snombre;
@@ -89,5 +90,9 @@ public abstract class Persona {
     public String toString() {
         return "Persona{" + "rut=" + rut + ", pnombre=" + pnombre + ", snombre=" + snombre + ", apaterno=" + apaterno + ", amaterno=" + amaterno + ", edad=" + edad + ", sexo=" + sexo + '}';
     }
-    
+
+    // MÉTODOS CUSTOMER
+    public void mostrarInformacionPersona() {
+        this.toString();
+    }
 }

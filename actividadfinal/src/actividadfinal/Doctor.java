@@ -1,6 +1,7 @@
 package actividadfinal;
 
-public class Doctor extends Persona {
+public class Doctor extends Persona implements IAcciones {
+
     String especialidad;
     int anhiosExperiencia;
     int sueldoBase;
@@ -47,5 +48,10 @@ public class Doctor extends Persona {
     public String toString() {
         return "Doctor{" + "especialidad=" + especialidad + ", anhiosExperiencia=" + anhiosExperiencia + ", sueldoBase=" + sueldoBase + '}';
     }
-       
+
+    @Override
+    public void mostrarInformacionEspecifica() {
+        super.mostrarInformacionPersona();
+        this.toString();
+    }
 }
