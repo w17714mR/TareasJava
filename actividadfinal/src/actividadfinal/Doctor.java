@@ -61,5 +61,10 @@ public class Doctor extends Persona {
     }
     
     @Override
-    public void calcularSueldo(int horasTrabajadas){}
+    public int calcularSueldo(int horasTrabajadas){
+        int total = 0;
+        total += this.sueldoBase;
+        total += BONO_MEDICO;
+        return total;
+    }
 }

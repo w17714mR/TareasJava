@@ -43,6 +43,13 @@ public class Clinica {
         }
         if (validador) {
             System.out.println("Persona encontrada: ");
+            if (auxiliar instanceof Doctor) {
+                System.out.println("DOCTOR");
+            } else if (auxiliar instanceof Paramedico) {
+                System.out.println("PARAMÉDICO");
+            } else {
+                System.out.println("");
+            }
             auxiliar.mostrarInformacionEspecifica();
         } else {
             System.out.println("Pesona no encontrada.");
@@ -50,7 +57,10 @@ public class Clinica {
     }
 
     public void listarTrabajadoresConSueldo() {
-    }
+        for (Persona persona: this.getColeccionDePersonas()){
+            persona.mostrarInformacionEspecifica();
+            System.out.println(persona.calcularSueldo(180));;
+    }}
 
     public void almacenarTrabajador(Persona persona1) {
         boolean validador = false;
@@ -63,10 +73,38 @@ public class Clinica {
                 }
             }
         }
-        if (validador) System.out.println("Persona ya se encuentra agregada.");
-        else {
+        if (validador) {
+            System.out.println("Persona ya se encuentra agregada.");
+        } else {
             this.getColeccionDePersonas().add(persona1);
-            System.out.println("Trabajador añadido: "+persona1.getPnombre());
+            System.out.println("Trabajador añadido: " + persona1.getPnombre());
+        }
+    }
+
+    public void listarTrabajadores() {
+        for (Persona persona : this.getColeccionDePersonas()) {
+            if (persona instanceof Doctor) {
+                System.out.println("DOCTOR");
+            } else if (persona instanceof Paramedico) {
+                System.out.println("PARAMÉDICO");
+            } else {
+                System.out.println("");
+            }
+            persona.mostrarInformacionEspecifica();
+        }
+    }
+
+    public void eliminarTrabajador(Persona persona1) {
+        if (this.coleccionDePersonas.size() == 0) {
+            System.out.println("Colección vacía.");
+        } else {
+            for (int x = 0; x < this.getColeccionDePersonas().size(); x++) {
+                if (this.getColeccionDePersonas().contains(persona1)) {
+                    this.getColeccionDePersonas().remove(persona1);
+                    System.out.println("Persona removida.");
+                } else {System.out.println("Persona no encontrada");}
+
+            }
         }
     }
 

@@ -84,7 +84,11 @@ public abstract class Persona implements IAcciones {
     }
 
     public void setSexo(char sexo) {
-        this.sexo = sexo;
+        if (sexo == 'F' || sexo == 'M' || sexo == 'O') {
+            this.sexo = sexo;
+        } else {
+            System.out.println("Caracter inválido");
+        }
     }
 
     @Override
@@ -96,8 +100,8 @@ public abstract class Persona implements IAcciones {
     public void mostrarInformacionPersona() {
         System.out.println("INFORMACIÓN PERSONAL: ");
         System.out.println("------------------------");
-        System.out.println("NOMBRE: "+this.getPnombre()+" "+this.snombre+" "+this.apaterno+" "+this.amaterno);
-        System.out.println("EDAD: "+this.getEdad());
-        System.out.println("SEXO: "+this.getSexo());
+        System.out.println("NOMBRE: " + this.getPnombre() + " " + this.snombre + " " + this.apaterno + " " + this.amaterno);
+        System.out.println("EDAD: " + this.getEdad());
+        System.out.println("SEXO: " + this.getSexo());
     }
 }

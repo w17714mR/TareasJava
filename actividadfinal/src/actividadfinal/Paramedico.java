@@ -30,7 +30,11 @@ public class Paramedico extends Persona {
     }
 
     public void setTipoTurno(char tipoTurno) {
-        this.tipoTurno = tipoTurno;
+        if (tipoTurno == '1' || tipoTurno == '2') {
+            this.tipoTurno = tipoTurno;
+        } else {
+            System.out.println("Caracter inválido.");
+        }
     }
 
     @Override
@@ -43,11 +47,16 @@ public class Paramedico extends Persona {
         this.mostrarInformacionPersona();
         System.out.println("INFORMACIÓN ESPECÍFICA: ");
         System.out.println("------------------------");
-        System.out.println("VALOR POR HORA: "+this.getValorHora());
-        System.out.println("TIPO DE TURNO: "+this.getTipoTurno());
+        System.out.println("VALOR POR HORA: " + this.getValorHora());
+        System.out.println("TIPO DE TURNO: " + this.getTipoTurno());
     }
-    
+
     @Override
-    public void calcularSueldo(int horasTrabajadas){}
+    public int calcularSueldo(int horasTrabajadas) {
+        int total = 0;
+        total += BONO_PARAMEDICO;
+        total += (horasTrabajadas*this.valorHora);
+        return total;
+    }
 
 }

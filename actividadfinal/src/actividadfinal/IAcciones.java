@@ -5,5 +5,5 @@ public interface IAcciones {
     int BONO_PARAMEDICO = 80000;
 
     public abstract void mostrarInformacionEspecifica();
-    public abstract void calcularSueldo(int horasTrabajadas);
+    public abstract int calcularSueldo(int horasTrabajadas);
 }
