@@ -31,14 +31,15 @@ public class Clinica {
         boolean validador = false;
         if (this.coleccionDePersonas.size() != 0) {
             for (Persona persona : this.getColeccionDePersonas()) {
-                if (persona.getRut().equals(persona1.getRut())) {
-                    System.out.println("Rut ya pertenece a la colección.");
-                }
-            }
-            
-            
-            
+                if (persona.getRut().equals(persona1.getRut()))
+                  validador = true;}
+        }
+        if (!validador) {
+        System.out.println("Persona no existe en la colección.");
         }
 
+        else System.out.println("No ha sido ingresado el usuario.")
     }
+
+    public void listarTrabajadoresConSueldo(){};
 }
